@@ -1,7 +1,87 @@
-## 📌 Overview.
-This is a Custom ROM Builder totally automated via Github Actions.
+# What is Project Nana?
+- Project Nana is a project that bring higher One UI version like 8.0, 8.5, etc... to old phone and unlock HighEnd/flagship feature for budget/midrange variant, still a small project that handle by BoomboxRapsody.  
+- Important, it based on the UN1CA & QuantumROM build system which allows automatic downloading/extraction of the firmware, applying the required patches and generating a flashable zip or product.img and system.img file package for the specified target device. Especially, its build system allows to automatically download/extract the firmware, apply the required patches and generates a flashable zip or product.img and system.img file package for the specified device.
 
-## How to Use:
+- Any form of contribution, suggestions, bug report or feature request for the project will be welcome.
+
+## Features:
+- Based on the latest Samsung devices One UI 8.5 firmware:
+  - Galaxy S23 - S911B, dm1q (Paradigm)
+  - Galaxy S23 FE - S711B, r11s (Paradigm)
+  - Galaxy A16 5G - A166P/A166B/A166M, a16xm/a16x (Recored, for A22 only)
+  - Galaxy A17 5G - A176B, a17x (Recored, for A22 only)
+  - Galaxy A26 5G - A266B, a26x (Eureka for A22)
+  - Galaxy A35 5G/A36 5G - A356B/A366B, a35x/a36xq (Eureka for A32)
+- Full Galaxy AI support from Galaxy S23-S24-S25, except Audio Eraser and Now brief
+- Full Awesome Intelligence features support from Galaxy A26 5G, A36 5G, A56 5G (Eureka A22 - Galaxy A26 5G base & Eureka A32 - Galaxy A36 5G? base, Galaxy A36 5G? base because I'm not sure Eureka for A32 variant too), and especially, in the Eureka A22 and Eureka A32 variant (Galaxy A26 5G/A36 5G base) will support fully both Galaxy AI and Awesome Intelligence features simultaneously.
+- App Lock Support
+- HighEnd animations
+- Screenshots from Secure Apps support
+- ASKS disabled 
+- Bixby and Bixby wake-up supported (normally debloated/not supported in QuantumROM build system)
+- Native/live blur support (Paradigm)
+- Adaptive refresh rate support (Paradigm)
+- Extra brightness support
+- Picture remaster support
+- Object, shadow and reflection eraser support
+- Image clipper support
+- Smart Suggestions widget available
+- Multi user support
+- Samsung DeX support (Paradigm)
+- Camera privacy toggle support
+- Debloated from useless system services/additional apps
+- [BluetoothLibraryPatcher](https://github.com/3arthur6/BluetoothLibraryPatcher) included (also included this feature in the QuantumROM build system)
+- [KnoxPatch](https://github.com/salvogiangri/KnoxPatch) implemented in system frameworks (also included this feature in the QuantumROM build system)
+
+# 📌 Overview of this QuantumROM builder based in this project:
+This Custom ROM is built by combining and refining features from multiple projects, including UN1CA, Legacy-UI, and AstroROM.
+- The goal of this ROM is to provide a clean, optimized, and stable One UI experience with enhanced usability and performance.
+
+## 🛠️ Tools features:
+- Download firmware directly from Samsung server.
+- File config and file contexts generate.
+- Extract and img build (erofs and ext4 supported).
+
+## ✨ Key features:
+- System Optimization.
+- Heavy debloated system (removed unnecessary apps & services).
+- Improved performance and smoother UI experience.
+- Optimized background processes.
+- Better battery efficiency.
+- Enhanced Functionality.
+- Screenshot anywhere (enabled globally).
+- Built-in Screen Recorder.
+- More floating features enabled.
+- Edge features fully working.
+- Stock device config always be added.
+- Extra brightness support.
+- Object, shadow and reflection remover support.
+- Multi user support.
+- Camera privacy toggle support.
+- Private Share patch.
+- Google Photos unlimited backup.
+- JDM device support.
+- [BluetoothLibraryPatcher](https://github.com/3arthur6/BluetoothLibraryPatcher) integrated
+
+## 🔐 Security & Privacy:
+- Secure Folder support.
+- Essential security components retained.
+- Stable and safe daily-driver experience.
+
+## 📱 One UI experience:
+- Full One UI apps included.
+- Important system apps preserved.
+- China Smart Manager support.
+- AI features enabled.
+
+## 🎯 Builder Goal:
+- To deliver a lightweight yet fully featured Samsung One UI ROM that balances.
+- Performance.
+- Stability.
+- Essential Features.
+- Clean User Experience.
+
+# How to use this QuantumROM builder that based in this project:
 #### 1. Fork the Repository.
 Give a ⭐ star to the repository.
 Fork the repository to your GitHub account.
