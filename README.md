@@ -63,15 +63,10 @@ Open your forked repository.
 - Select UltimateM23 Tools.
 - Click Run workflow.
 
-#### 3. Set Your Device Information.
-- Configure the following options:
-- TARGET_DEVICE_MODEL
-- The your device model.
-- STOCK_DEVICE_CSC
-- The country/region code used to download the stock device firmware.
-- STOCK_DEVICE_IMEI
-- Required to download the stock device firmware from the Samsung server.
-- Change the IMEI if you want to change the stock device.
+#### 3. Set Your Device Model.
+Update your device model in the STOCK_DEVICE_MODEL option.
+- If your model is available in /QuantumROM/Device folder of this repository, the tool will work for your device.
+- If your model is not present, set STOCK_DEVICE_MODEL to None.
 
 #### 4. Kernel BPF Version Option.
 Set this o
