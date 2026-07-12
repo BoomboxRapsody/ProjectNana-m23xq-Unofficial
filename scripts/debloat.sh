@@ -5,10 +5,9 @@
 DEBLOAT_APPS=(
 "HMT" "PaymentFramework" "DigitalWellbeing" "FactoryCameraFB"
 "WlanTest" "AirGlance" "AirReadingGlass" "AndroidGlassesCore"
-"SOAgent77" "ARCore" "ARDrawing" "ARZone" "BGMProvider"
-"SingleTakeService" "BixbyWakeup" "BlockchainBasicKit"
+"SOAgent77" "ARCore" "ARDrawing" "ARZone" "BGMProvider" "BixbyWakeup" "BlockchainBasicKit"
 "Cameralyzer" "DictDiotekForSec" "EasymodeContactsWidget81"
-"Fast" "FunModeSDK" "GearManagerStub" "KidsHome_Installer"
+"GearManagerStub" "KidsHome_Installer"
 "LinkSharing_v11" "LiveDrawing" "MAPSAgent" "MdecService"
 "MinusOnePage" "MoccaMobile" "Netflix_stub" "Notes40"
 "ParentalCare" "PhotoTable" "SmartReminder" "SmartSwitchStub"
@@ -36,25 +35,22 @@ CARRIER_APPS=(
 
 # SAMSUNG FEATURES / APPS
 SAMSUNG_APPS=(
-"SamsungCalendar" "SamsungTTS" "SamsungBilling"
+"SamsungTTS" "SamsungBilling"
 "OneDrive_Samsung_v3" "SamsungCarKeyFw"
-"SamsungPass" "SamsungSmartSuggestions"
+"SamsungPass"
 "SamsungPassAutofill_v1"
 "AirCommand" "AppUpdateCenter" "AREmoji"
 "AREmojiEditor" "AutoDoodle" "AvatarEmojiSticker"
 "AvatarEmojiSticker_S" "AvatarPicker"
-"GalleryWidget" "LiveStickers" "StoryService"
-"StickerFaceARAvatar" "sticker"
+"LiveStickers" "StoryService"
+"StickerFaceARAvatar"
 )
 
 
 # SAMSUNG AI / SMART
 SAMSUNG_AI=(
-"LiveTranscribe" "Bixby" "BixbyInterpreter"
-"BixbyVisionFramework3.5" "SettingsBixby"
-"SmartEye" "SmartPush" "SmartPush_64"
-"SmartThingsKit" "SmartTouchCall"
-"VisionIntelligence3.7"
+"LiveTranscribe" "SmartEye" "SmartPush" "SmartPush_64"
+"SmartThingsKit"
 )
 
 
@@ -62,9 +58,9 @@ SAMSUNG_AI=(
 GOOGLE_APPS=(
 "SpeechServicesByGoogle" "Maps" "Duo" "Photos"
 "AssistantShell" "BardShell" "DuoStub"
-"GoogleCalendarSyncAdapter" "AndroidDeveloperVerifier"
+"AndroidDeveloperVerifier"
 "YourPhone_Stub" "AndroidAutoStub" "FamilyLinkParentalControls"
-"AndroidSystemIntelligence" "GoogleRestore"
+"GoogleRestore"
 "SamsungMessages" "SearchSelector" "PlayAutoInstallConfig" "FamilyLinkParentalControls"
 )
 
@@ -99,7 +95,7 @@ MISC_SERVICES=(
 "UltraDataSaving_O" "Upday"
 "YourPhone_P1_5" "DsmsAPK"
 "vexfwk_service" "VexScanner"
-"LiveEffectService" "MyGalaxyService"
+"MyGalaxyService"
 )
 
 
