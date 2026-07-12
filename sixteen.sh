@@ -58,7 +58,7 @@ fi
 
 # Source
 source "$(pwd)/scripts/debloat.sh"
-source "$(pwd)/scripts/QuantumRom.sh"
+source "$(pwd)/scripts/Build.sh"
 
 #EXTRACT_FIRMWARE "$FIRM_DIR/$TARGET_DEVICE"
 EXTRACT_SUPER_IMG "$FIRM_DIR/$TARGET_DEVICE"
