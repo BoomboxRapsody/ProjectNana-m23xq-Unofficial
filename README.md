@@ -4,35 +4,6 @@
 
 - Any form of contribution, suggestions, bug report or feature request for the project will be welcome.
 
-## Features:
-- Based on the latest Samsung devices One UI 8.5 firmware:
-  - Galaxy S23 - S911B, dm1q (Paradigm)
-  - Galaxy S23 FE - S711B, r11s (Paradigm)
-  - Galaxy A16 5G - A166P/A166B/A166M, a16xm/a16x (Recored, for A22 only)
-  - Galaxy A17 5G - A176B, a17x (Recored, for A22 only)
-  - Galaxy A26 5G - A266B, a26x (Eureka for A22)
-  - Galaxy A35 5G/A36 5G - A356B/A366B, a35x/a36xq (Eureka for A32)
-- Full Galaxy AI support from Galaxy S23-S24-S25, except Audio Eraser and Now brief
-- Full Awesome Intelligence features support from Galaxy A26 5G, A36 5G, A56 5G (Eureka A22 - Galaxy A26 5G base & Eureka A32 - Galaxy A36 5G? base, Galaxy A36 5G? base because I'm not sure Eureka for A32 variant too), and especially, in the Eureka A22 and Eureka A32 variant (Galaxy A26 5G/A36 5G base) will support fully both Galaxy AI and Awesome Intelligence features simultaneously.
-- App Lock Support
-- HighEnd animations
-- Screenshots from Secure Apps support
-- ASKS disabled 
-- Bixby and Bixby wake-up supported (normally debloated/not supported in QuantumROM build system)
-- Native/live blur support (Paradigm)
-- Adaptive refresh rate support (Paradigm)
-- Extra brightness support
-- Picture remaster support
-- Object, shadow and reflection eraser support
-- Image clipper support
-- Smart Suggestions widget available
-- Multi user support
-- Samsung DeX support (Paradigm)
-- Camera privacy toggle support
-- Debloated from useless system services/additional apps
-- [BluetoothLibraryPatcher](https://github.com/3arthur6/BluetoothLibraryPatcher) included (also included this feature in the QuantumROM build system)
-- [KnoxPatch](https://github.com/salvogiangri/KnoxPatch) implemented in system frameworks (also included this feature in the QuantumROM build system)
-
 # 📌 Overview of this QuantumROM builder based in this project:
 This Custom ROM is built by combining and refining features from multiple projects, including UN1CA, Legacy-UI, and AstroROM.
 - The goal of this ROM is to provide a clean, optimized, and stable One UI experience with enhanced usability and performance.
