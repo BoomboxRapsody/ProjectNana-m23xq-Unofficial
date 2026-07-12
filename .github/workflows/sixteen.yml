@@ -6,31 +6,23 @@ on:
       STOCK_DEVICE:
         description: "STOCK_DEVICE_MODEL or None"
         required: true
-        default: "SM-M236L"
-      STOCK_DEVICE_CSC:
-        description: "STOCK_DEVICE_CSC."
-        required: true
-        default: "LUC"
-      STOCK_DEVICE_IMEI:
-        description: "STOCK_DEVICE_IMEI."
-        required: true
-        default: ""  
+        default: "SM-A225F"
       USE_UI_8_TETHERING_APEX:
         description: "Set True if your kernel BPF version is 5.4 (lower than 5.10)."
         required: true
-        default: "True"
+        default: "False"
       TARGET_DEVICE:
         description: "TARGET_DEVICE_MODEL."
         required: true
-        default: "SM-S901E"
+        default: "SM-A346E"
       TARGET_DEVICE_CSC:
         description: "TARGET_DEVICE_CSC."
         required: true
-        default: "TUR"
+        default: "BKD"
       TARGET_DEVICE_IMEI:
         description: "TARGET_DEVICE_IMEI."
         required: true
-        default: ""
+        default: "353435774197736"
       OUTPUT_FILESYSTEM:
         description: "OUTPUT_FILESYSTEM. e.g erofs / ext4 / f2fs"
         required: true
@@ -38,7 +30,7 @@ on:
       COMPRESS_IMG_TO_XZ:
         description: "Compress IMG to XZ (True/False)"
         required: true
-        default: "True"
+        default: "False"
 
 jobs:
   build:
@@ -48,6 +40,21 @@ jobs:
     steps:
       - name: Checkout repository.
         uses: actions/checkout@v4
+
+      - name: Validate STOCK_DEVICE
+        run: |
+          STOCK_DEVICE="${{ github.event.inputs.STOCK_DEVICE }}"
+          if [ "$STOCK_DEVICE" != "None" ]; then
+              if curl -fsSL \
+                  "https://api.github.com/repos/SN-Abdullah-Al-Noman/QuantumROM/releases/tags/QuantumROM_Devices" |
+                  jq -e --arg dev "${STOCK_DEVICE}.zip" '.assets[].name == $dev' |
+                  grep -q true; then
+                  echo "$STOCK_DEVICE is supported"
+              else
+                 echo "❌ $STOCK_DEVICE is not supported by this tool."
+                 exit 1
+              fi
+          fi
 
       - name: Remove unnecessary files.
         uses: rokibhasansagar/slimhub_actions@v25.42.5
@@ -63,14 +70,12 @@ jobs:
       - name: Download firmware ▶️ ${{ github.event.inputs.TARGET_DEVICE }} - ${{ github.event.inputs.TARGET_DEVICE_CSC }}
         run: |
           source scripts/Build.sh
-          DOWNLOAD_TARGET_FIRMWARE "${{ github.event.inputs.STOCK_DEVICE }}" "${{ github.event.inputs.STOCK_DEVICE_CSC }}" "${{ github.event.inputs.STOCK_DEVICE_IMEI }}" "FW" "${{ github.event.inputs.STOCK_FW_VERSION }}"
-          DOWNLOAD_TARGET_FIRMWARE "${{ github.event.inputs.TARGET_DEVICE }}" "${{ github.event.inputs.TARGET_DEVICE_CSC }}" "${{ github.event.inputs.TARGET_DEVICE_IMEI }}" "FW" "${{ github.event.inputs.TARGET_FW_VERSION }}"
+          DOWNLOAD_FIRMWARE "${{ github.event.inputs.TARGET_DEVICE }}" "${{ github.event.inputs.TARGET_DEVICE_CSC }}" "${{ github.event.inputs.TARGET_DEVICE_IMEI }}" "FW" "${{ github.event.inputs.TARGET_FW_VERSION }}"
 
       - name: Extract firmware
         run: |
           source scripts/Build.sh
-          EXTRACT_STOCK_FIRMWARE "FW/${{ github.event.inputs.STOCK_DEVICE }}"
-          EXTRACT_TARGET_FIRMWARE "FW/${{ github.event.inputs.TARGET_DEVICE }}"
+          EXTRACT_FIRMWARE "FW/${{ github.event.inputs.TARGET_DEVICE }}"
 
       - name: Start Rom Build For ${{ github.event.inputs.STOCK_DEVICE }}
         run: |
