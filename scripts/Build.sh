@@ -53,29 +53,45 @@ REMOVE_LINE() {
 
 GET_PROP() {
     if [ "$#" -ne 3 ]; then
-        echo -e "Usage: ${FUNCNAME[0]} <EXTRACTED_FIRM_DIR> <PARTITION> <PROP>"
+        echo -e "Usage: ${FUNCNAME[0]} <EXTRACTED_FIRM_STOCK_DIR> <EXTRACTED_FIRM_TARGET_DIR> <PARTITION> <PROP>"
         return 1
     fi
 
-    local EXTRACTED_FIRM_DIR="$1"
-    local PARTITION="$2"
-    local PROP="$3"
+    local EXTRACTED_FIRM_STOCK_DIR="$1"
+	local EXTRACTED_FIRM_TARGET_DIR="$2"
+    local PARTITION="$3"
+    local PROP="$4"
 
     case "$PARTITION" in
-        system)
-            FILE="${EXTRACTED_FIRM_DIR}/system/system/build.prop"
+        system_stock_prop)
+            FILE="${EXTRACTED_FIRM_STOCK_DIR}/system/system/build.prop"
             ;;
-        vendor)
-            FILE="${EXTRACTED_FIRM_DIR}/vendor/build.prop"
+        vendor_stock_prop)
+            FILE="${EXTRACTED_FIRM_STOCK_DIR}/vendor/build.prop"
             ;;
-        product)
-            FILE="${EXTRACTED_FIRM_DIR}/product/etc/build.prop"
+        product_stock_prop)
+            FILE="${EXTRACTED_FIRM_STOCK_DIR}/product/etc/build.prop"
             ;;
-        system_ext)
-            FILE="${EXTRACTED_FIRM_DIR}/system_ext/etc/build.prop"
+        system_ext_stock_prop)
+            FILE="${EXTRACTED_FIRM_STOCK_DIR}/system_ext/etc/build.prop"
             ;;
-        odm)
-            FILE="${EXTRACTED_FIRM_DIR}/odm/etc/build.prop"
+        odm_stock_prop)
+            FILE="${EXTRACTED_FIRM_STOCK_DIR}/odm/etc/build.prop"
+            ;;
+		system_target_prop)
+            FILE="${EXTRACTED_FIRM_TARGET_DIR}/system/system/build.prop"
+            ;;
+        vendor_target_prop)
+            FILE="${EXTRACTED_FIRM_TARGET_DIR}/vendor/build.prop"
+            ;;
+        product_target_prop)
+            FILE="${EXTRACTED_FIRM_TARGET_DIR}/product/etc/build.prop"
+            ;;
+        system_ext_target_prop)
+            FILE="${EXTRACTED_FIRM_TARGET_DIR}/system_ext/etc/build.prop"
+            ;;
+        odm_target_prop)
+            FILE="${EXTRACTED_FIRM_TARGET_DIR}/odm/etc/build.prop"
             ;;
         *)
             echo -e "Unknown partition: $PARTITION"
