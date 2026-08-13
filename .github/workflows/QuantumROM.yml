@@ -20,7 +20,7 @@ on:
         required: true
         default: "BKD"
       TARGET_FW_VERSION:
-        description: "Specific Samsung firmware version (PDA/CSC/MODEM)"
+        description: "Specific Samsung firmware version (PDA/CSC/MODEM) OR (AP/CSC/CP)"
         required: false
       OUTPUT_FILESYSTEM:
         description: "OUTPUT_FILESYSTEM. e.g erofs / ext4 / f2fs"
