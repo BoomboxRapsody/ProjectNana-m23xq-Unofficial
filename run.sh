@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$#" -lt 6 ]; then
-    echo "Usage: $0 <STOCK_DEVICE> <USE_UI_8_TETHERING_APEX> <TARGET_DEVICE> <TARGET_DEVICE_CSC> <OUTPUT_FILESYSTEM>"
+if [ "$#" -lt 4 ]; then
+    echo "Usage: $0 <STOCK_DEVICE> <TARGET_DEVICE> <USE_UI_8_TETHERING_APEX> <OUTPUT_FILESYSTEM>"
     exit 1
 fi
 
@@ -9,10 +9,9 @@ VERSION="1"
 
 # Device info
 export STOCK_DEVICE="$1"
-export USE_UI_8_TETHERING_APEX="$2"
-export TARGET_DEVICE="$3"
-export TARGET_DEVICE_CSC="$4"
-export OUTPUT_FILESYSTEM="$5"
+export TARGET_DEVICE="$2"
+export USE_UI_8_TETHERING_APEX="$3"
+export OUTPUT_FILESYSTEM="$4"
 
 # Directories
 export FIRM_DIR="$(pwd)/FW"

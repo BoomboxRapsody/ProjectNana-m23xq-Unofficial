@@ -79,9 +79,8 @@ jobs:
         run: |
           sudo bash run.sh \
             "${{ github.event.inputs.STOCK_DEVICE }}" \
-            "${{ github.event.inputs.USE_UI_8_TETHERING_APEX }}" \
             "${{ github.event.inputs.TARGET_DEVICE }}" \
-            "${{ github.event.inputs.TARGET_DEVICE_CSC }}" \
+            "${{ github.event.inputs.USE_UI_8_TETHERING_APEX }}" \
             "${{ github.event.inputs.OUTPUT_FILESYSTEM }}"
 
       - name: Compress all .img & make zip file before upload.
