@@ -35,7 +35,6 @@ if [ "$STOCK_DEVICE" != "None" ]; then
 fi
 
 
-if [ ! -f "$(pwd)/QuantumROM/Devices/${STOCK_DEVICE}.zip" ]; then
 if [ "$STOCK_DEVICE" != "None" ]; then
     if [ ! -f "$(pwd)/QuantumROM/Devices/${STOCK_DEVICE}.zip" ]; then
         if curl -fsSL --connect-timeout 5 https://www.google.com >/dev/null; then
