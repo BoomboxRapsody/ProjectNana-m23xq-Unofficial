@@ -1316,11 +1316,11 @@ GET_SYSTEM_EXT_DIR() {
 
     local EXTRACTED_FIRM_DIR="$1"
 
-    if [ -d "${EXTRACTED_FIRM_DIR}/system_ext/etc" ]; then
+    if [ ! -L "${EXTRACTED_FIRM_DIR}/system_ext" ] && [ -d "${EXTRACTED_FIRM_DIR}/system_ext/etc" ]; then
         local TARGET_ROM_SYSTEM_EXT_DIR="${EXTRACTED_FIRM_DIR}/system_ext"
-    elif [ -d "${EXTRACTED_FIRM_DIR}/system/system_ext/etc" ]; then
+    elif [ ! -L "${EXTRACTED_FIRM_DIR}/system/system_ext" ] && [ -d "${EXTRACTED_FIRM_DIR}/system/system_ext/etc" ]; then
         local TARGET_ROM_SYSTEM_EXT_DIR="${EXTRACTED_FIRM_DIR}/system/system_ext"
-    elif [ -d "${EXTRACTED_FIRM_DIR}/system/system/system_ext/etc" ]; then
+    elif [ ! -L "${EXTRACTED_FIRM_DIR}/system/system/system_ext" ] && [ -d "${EXTRACTED_FIRM_DIR}/system/system/system_ext/etc" ]; then
         local TARGET_ROM_SYSTEM_EXT_DIR="${EXTRACTED_FIRM_DIR}/system/system/system_ext"
     else
         return 1
