@@ -1,4 +1,4 @@
-name: M23Ultra Tools Sixteen.
+name: Project Nana Tools Sixteen.
 
 on:
   workflow_dispatch:
@@ -42,7 +42,7 @@ on:
 
 jobs:
   build:
-    name: Start M23Ultra Tools Sixteen.
+    name: Start Project Nana Tools Sixteen.
     runs-on: ubuntu-24.04
 
     steps:
