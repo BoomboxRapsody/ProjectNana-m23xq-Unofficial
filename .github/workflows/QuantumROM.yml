@@ -1,4 +1,4 @@
-name: QuantumROM Tools.
+name: Project Nana Tools.
 
 on:
   workflow_dispatch:
@@ -33,7 +33,7 @@ on:
 
 jobs:
   build:
-    name: Start QuantumROM Tools Sixteen.
+    name: Start Project Nana Tools Sixteen.
     runs-on: ubuntu-24.04
 
     steps:
@@ -45,7 +45,7 @@ jobs:
           STOCK_DEVICE="${{ github.event.inputs.STOCK_DEVICE }}"
           if [ "$STOCK_DEVICE" != "None" ]; then
               if curl -fsSL \
-                  "https://api.github.com/repos/SN-Abdullah-Al-Noman/QuantumROM/releases/tags/QuantumROM_Devices" |
+                  "https://api.github.com/repos/BoomboxRapsody/ProjectNana-m23xq-Unofficial/releases/tags/ProjectNana_Devices" |
                   jq -e --arg dev "${STOCK_DEVICE}.zip" '.assets[].name == $dev' |
                   grep -q true; then
                   echo "$STOCK_DEVICE is supported"
