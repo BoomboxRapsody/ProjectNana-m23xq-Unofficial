@@ -24,7 +24,7 @@ export BUILD_PARTITIONS="product,system_ext,system"
 
 if [ "$STOCK_DEVICE" != "None" ]; then
     if curl -fsSL \
-        "https://api.github.com/repos/SN-Abdullah-Al-Noman/QuantumROM/releases/tags/QuantumROM_Devices" |
+        "https://api.github.com/repos/BoomboxRapsody/ProjectNana-m23xq-Unofficial/releases/tags/ProjectNana_Devices" |
         jq -e --arg dev "${STOCK_DEVICE}.zip" '.assets[].name == $dev' |
         grep -q true; then
         echo "$STOCK_DEVICE is supported"
@@ -39,7 +39,7 @@ if [ "$STOCK_DEVICE" != "None" ]; then
     if [ ! -f "$(pwd)/QuantumROM/Devices/${STOCK_DEVICE}.zip" ]; then
         if curl -fsSL --connect-timeout 5 https://www.google.com >/dev/null; then
             wget --no-check-certificate \
-            "https://github.com/SN-Abdullah-Al-Noman/QuantumROM/releases/download/QuantumROM_Devices/${STOCK_DEVICE}.zip" \
+            "https://github.com/BoomboxRapsody/ProjectNana-m23xq-Unofficial/releases/download/ProjectNana_Devices/${STOCK_DEVICE}.zip" \
             -O "$(pwd)/QuantumROM/Devices/${STOCK_DEVICE}.zip"
         else
 	        rm -rf "$(pwd)/QuantumROM/Devices/${STOCK_DEVICE}.zip"
