@@ -91,7 +91,7 @@ MISC_SERVICES=(
 "SumeNNService" "SVoiceIME"
 "SwiftkeyIme" "SwiftkeySetting"
 "SystemUpdate" "TADownloader"
-"TalkbackSE" "TaPackAuthFw"
+"TalkbackSE" "TalkBack" "TaPackAuthFw"
 "UltraDataSaving_O" "Upday"
 "YourPhone_P1_5" "DsmsAPK"
 "vexfwk_service" "VexScanner"
