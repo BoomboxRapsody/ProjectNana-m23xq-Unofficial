@@ -21,6 +21,7 @@ export imgextractor_py="$QT_DIR/bin/py_scripts/imgextractor.py"
 
 chmod +x "$lpmake"
 chmod +x "$lpunpack"
+chmod +x "$samloader"
 chmod +x "$make_f2fs"
 chmod +x "$sload_f2fs"
 chmod +x "$mkfs_erofs"
