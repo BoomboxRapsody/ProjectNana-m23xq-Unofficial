@@ -215,7 +215,7 @@ DOWNLOAD_FIRMWARE() {
 	find "$DOWN_DIR" -type f -name "*.zip.enc*" -delete
 
     # Show Firmware Info
-    local file_size=$(du -m "${DOWN_DIR}/${VERSION}.zip" 2>/dev/null | awk '{print $1}')
+    local file_size=$(du -m "${DOWN_DIR}/${VERSION_FILE}.zip" 2>/dev/null | awk '{print $1}')
     echo -e "Firmware Size: ${file_size} MB"
 }
 
